@@ -1,0 +1,103 @@
+.photo-card {
+  background: var(--card-white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  break-inside: avoid;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.photo-card-image-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--petal);
+}
+
+.photo-card-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.photo-card-image-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.photo-card-corner-heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  text-shadow: 0 1px 4px rgba(92, 65, 71, 0.5);
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.photo-card-footer {
+  padding: 12px 14px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.photo-caption {
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  color: var(--ink);
+  margin: 0;
+  flex: 1;
+  cursor: pointer;
+  line-height: 1.3;
+}
+
+.photo-caption:hover {
+  color: var(--rose-deep);
+}
+
+.caption-edit-row {
+  display: flex;
+  gap: 6px;
+  flex: 1;
+}
+
+.caption-input {
+  flex: 1;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  border: 1px solid var(--petal);
+  border-radius: 8px;
+  color: var(--ink);
+  background: var(--bg-blush);
+}
+
+.caption-btn.save {
+  background: var(--rose);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.photo-delete-btn {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  opacity: 0.5;
+  flex-shrink: 0;
+  padding: 2px 4px;
+  border-radius: 50%;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.photo-delete-btn:hover {
+  opacity: 1;
+  color: var(--rose-deep);
+}
