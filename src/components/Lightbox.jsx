@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import FloatingHearts from "./FloatingHearts";
 import "../styles/Lightbox.css";
 
 const backdropVariants = {
@@ -26,6 +27,14 @@ export default function Lightbox({ photo, onClose }) {
           transition={{ duration: 0.28, ease: "easeOut" }}
           onClick={onClose}
         >
+          <FloatingHearts
+            density={14}
+            message="I Love You Mithu"
+            durationMin={5.8}
+            durationMax={8.2}
+            driftRange={150}
+          />
+
           <motion.button
             className="lightbox-close"
             onClick={onClose}
