@@ -4,8 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(ellipse at 50% 20%, #FFEDF0 0%, var(--bg-blush) 55%, #FFF1ED 100%);
+  background: transparent;
   padding: 24px;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 95, 147, 0.2), transparent 34%),
+    radial-gradient(circle at 80% 100%, rgba(255, 214, 227, 0.14), transparent 28%);
+  pointer-events: none;
 }
 
 .landing-content {
@@ -21,9 +31,10 @@
 .landing-eyebrow {
   font-family: var(--font-script);
   font-size: clamp(1.1rem, 3vw, 1.5rem);
-  color: var(--ink-soft);
+  color: #f9dce7;
   margin: 0;
   letter-spacing: 0.02em;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .love-seal {
@@ -34,17 +45,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(155deg, var(--rose) 0%, var(--rose-deep) 100%);
+  background: linear-gradient(145deg, #ff74a4 0%, #d63f75 55%, #8b1c3d 100%);
   box-shadow:
-    0 20px 50px rgba(217, 79, 112, 0.35),
-    inset 0 2px 12px rgba(255, 255, 255, 0.35);
+    0 22px 60px rgba(0, 0, 0, 0.28),
+    inset 0 2px 16px rgba(255, 255, 255, 0.3);
 }
 
 .love-seal-ring {
   position: absolute;
   inset: -10px;
   border-radius: 50%;
-  border: 2px solid rgba(242, 120, 159, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 26px rgba(255, 95, 147, 0.16);
 }
 
 .love-seal-text {
@@ -71,11 +83,12 @@
 .landing-hint {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: var(--ink-soft);
+  color: #f6d8e4;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0;
-  opacity: 0.7;
+  opacity: 0.75;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 480px) {

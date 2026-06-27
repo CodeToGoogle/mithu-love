@@ -1,7 +1,15 @@
 .gallery-page {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(180deg, #FFF1ED 0%, var(--bg-blush) 100%);
+  background: transparent;
+}
+
+.gallery-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 95, 147, 0.08), transparent 40%, rgba(255, 255, 255, 0.04));
+  pointer-events: none;
 }
 
 .gallery-header {
@@ -13,14 +21,15 @@
   justify-content: space-between;
   gap: 12px;
   padding: 18px 22px;
-  background: rgba(255, 247, 245, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--petal);
+  background: rgba(5, 2, 9, 0.74);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
 
 .gallery-back {
   font-size: 1.3rem;
-  color: var(--rose-deep);
+  color: #ffd7e2;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -28,31 +37,33 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .gallery-back:hover {
-  background: var(--petal);
+  background: rgba(255, 95, 147, 0.2);
 }
 
 .gallery-title {
   font-family: var(--font-display);
   font-style: italic;
   font-size: clamp(1.1rem, 3vw, 1.6rem);
-  color: var(--ink);
+  color: #fff5f9;
   margin: 0;
   flex: 1;
   text-align: center;
+  text-shadow: 0 0 18px rgba(255, 95, 147, 0.16);
 }
 
 .gallery-add-btn {
-  background: linear-gradient(135deg, var(--rose), var(--rose-deep));
+  background: linear-gradient(135deg, #ff6f9d 0%, #d63f75 100%);
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
   padding: 9px 16px;
   border-radius: 20px;
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(217, 79, 112, 0.3);
+  box-shadow: 0 10px 28px rgba(214, 63, 117, 0.34);
 }
 
 .gallery-add-btn:hover {
@@ -68,25 +79,25 @@
 
 .gallery-signout-btn {
   font-size: 0.78rem;
-  color: var(--ink-soft);
+  color: #f5d7e4;
   white-space: nowrap;
 }
 
 .gallery-signout-btn:hover {
-  color: var(--rose-deep);
+  color: #ff9dc0;
 }
 
 .gallery-signin-link {
   font-size: 0.78rem;
-  color: var(--ink-soft);
-  opacity: 0.55;
+  color: #f5d7e4;
+  opacity: 0.8;
   white-space: nowrap;
   flex-shrink: 0;
 }
 
 .gallery-signin-link:hover {
   opacity: 1;
-  color: var(--rose-deep);
+  color: #ff9dc0;
 }
 
 .gallery-main {
@@ -122,13 +133,13 @@
 
 .gallery-status {
   text-align: center;
-  color: var(--ink-soft);
+  color: #f3dce7;
   font-size: 1rem;
   margin-top: 60px;
 }
 
 .gallery-status.error {
-  color: var(--rose-deep);
+  color: #ff8ab2;
 }
 
 .gallery-empty {
@@ -137,10 +148,11 @@
   align-items: center;
   gap: 12px;
   margin-top: 80px;
-  color: var(--ink-soft);
+  color: #f3dce7;
 }
 
 .gallery-empty-heart {
   font-size: 2.5rem;
-  color: var(--petal);
+  color: #ff82ae;
+  text-shadow: 0 0 18px rgba(255, 95, 147, 0.24);
 }
